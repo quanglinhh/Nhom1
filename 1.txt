@@ -15,8 +15,8 @@ và Nhân viên phòng Nhân sự thực hiện các công việc như:
 --Mã NV (Khóa chính)
 --Tên NV
 --Ngày tháng năm sinh
---Chức vụ (Trưởng phòng, nhân viên)
---Lương (Bậc lương)
+--Vị trí (Trưởng phòng, nhân viên, ứng viên) or chức vụ
+--Lương (Bậc lương -- mức 1 - 2 - 3)
 --Trình độ học vấn (Đại học, cao đẳng, Tốt nghiệp Đại Học.....)
 --Ngày ký hợp đồng
 --Mã Phòng ban(Khóa liên kết)
@@ -25,18 +25,14 @@ và Nhân viên phòng Nhân sự thực hiện các công việc như:
 --------Bảng Phòng ban:
 --Mã Phòng Ban(Khóa chính)
 --Tên phòng ban 
---Mã Công việc(Khóa liên kết)
 --Thời gian công tác 
 --Trưởng phòng
+--Mã Công việc(Khóa liên kết)
+
 
 ---------Bảng Công Việc:
 --Mã Công Việc(Khóa chính)
 --Tên Công Việc
 --Yêu cầu ứng tuyển ( Có bằng đại học, Có bằng cao đẳng...)
-
--------Bảng ứng viên
---Mã NV
---Mã Công Việc
---Khóa chính (Mã công việc,Mã NV)
 
 
