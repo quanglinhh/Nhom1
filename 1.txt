@@ -42,4 +42,3 @@ quan hệ: ?
 --nv liên kết - ứng tuyển cho 1 cv nào đó -- cv đấy thì sẽ thuộc 1 phòng ban nào đó
 
 
-

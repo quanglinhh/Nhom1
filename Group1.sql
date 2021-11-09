@@ -68,6 +68,7 @@ INSERT INTO SalaryDetail VALUES (N'Bậc 3')
 INSERT INTO Position VALUES( N'Giam đốc')
 INSERT INTO Position VALUES( N'Trưởng phòng')
 INSERT INTO Position VALUES( N'Nhân viên')
+INSERT INTO Position VALUES( N'Nhân viên thử việc')
 
 --insert dữ liệu vào bảng nối giữa chức vu và tiền lương
 INSERT INTO Salary_Position VALUES (1,1,5000)
