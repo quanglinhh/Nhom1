@@ -1,1 +1,42 @@
-Hee
+"Đại học FPT ngày càng mở rộng về nhân sự, do đó công tác quản lý 
+đòi hỏi cần có sự trợ giúp của phần mềm. Với vai trò là Nhà Phát triển bạn 
+xây dựng một ứng dụng để phục vụ công tác này. Ứng dụng cho phép các Quản lý 
+và Nhân viên phòng Nhân sự thực hiện các công việc như:
++ Bổ sung\cập nhật hồ sơ nhân viên
++ Quản lý bảng lương của nhân viên
++ Quản lý thông tin về các phòng ban
++ Tìm kiếm nhân sự phù hợp với một công việc nào đó
++ Quản lý quyết định liên quan tới một nhân viên: thay đổi chức vụ, thay đổi bậc lương, chuyển công tác, ...
++ Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
++ Thống kê về nhân sự theo các tiêu chí khác nhau"
+
+
+--------Bảng nhân viên:
+--Mã NV (Khóa chính)
+--Tên NV
+--Ngày tháng năm sinh
+--Chức vụ (Trưởng phòng, nhân viên)
+--Lương (Bậc lương)
+--Trình độ học vấn (Đại học, cao đẳng, Tốt nghiệp Đại Học.....)
+--Ngày ký hợp đồng
+--Mã Phòng ban(Khóa liên kết)
+
+
+--------Bảng Phòng ban:
+--Mã Phòng Ban(Khóa chính)
+--Tên phòng ban 
+--Mã Công việc(Khóa liên kết)
+--Thời gian công tác 
+--Trưởng phòng
+
+---------Bảng Công Việc:
+--Mã Công Việc(Khóa chính)
+--Tên Công Việc
+--Yêu cầu ứng tuyển ( Có bằng đại học, Có bằng cao đẳng...)
+
+-------Bảng ứng viên
+--Mã NV
+--Mã Công Việc
+--Khóa chính (Mã công việc,Mã NV)
+
+
