@@ -19,20 +19,27 @@ và Nhân viên phòng Nhân sự thực hiện các công việc như:
 --Lương (Bậc lương -- mức 1 - 2 - 3)
 --Trình độ học vấn (Đại học, cao đẳng, Tốt nghiệp Đại Học.....)
 --Ngày ký hợp đồng
---Mã Phòng ban(Khóa liên kết)
+--Mã Công Việc(Khóa phụ)
 
+quan hệ: 1 nv ứng tuyển cho 1 cv
+         1 cv có nhiều nv
+
+---------Bảng Công Việc:
+--Mã Công Việc(Khóa chính)
+--Tên Công Việc
+--Yêu cầu ứng tuyển ( Có bằng đại học, Có bằng cao đẳng...)
+--Mã Phòng Ban(Khóa phụ)
+
+quan hệ: ?
 
 --------Bảng Phòng ban:
 --Mã Phòng Ban(Khóa chính)
 --Tên phòng ban 
 --Thời gian công tác 
 --Trưởng phòng
---Mã Công việc(Khóa liên kết)
+--nhân viên của phòng (gồm những ai...)
 
+--nv liên kết - ứng tuyển cho 1 cv nào đó -- cv đấy thì sẽ thuộc 1 phòng ban nào đó
 
----------Bảng Công Việc:
---Mã Công Việc(Khóa chính)
---Tên Công Việc
---Yêu cầu ứng tuyển ( Có bằng đại học, Có bằng cao đẳng...)
 
 
