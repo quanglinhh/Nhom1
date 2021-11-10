@@ -6,6 +6,7 @@ GO
 
 USE FPTUniversity
 --Tạo bảng phòng ban
+
 CREATE TABLE Department(
 	DID INT IDENTITY(1,1) PRIMARY KEY, --Mã phòng ban
 	D_Name NVARCHAR(30),--Tên phòng ban
@@ -17,6 +18,7 @@ CREATE TABLE Job(
 	JID INT IDENTITY(1,1) PRIMARY KEY,--Mã công việc
 	J_Name NVARCHAR(30),--Tên công việc
 	Request NVARCHAR (100),--Yêu cầu công việc
+
 	DID INT--Mã phòng ban (Khóa ngoại)
 	CONSTRAINT J_D_FK FOREIGN KEY (DID) REFERENCES Department(DID),--Tạo khóa ngoại
 );
@@ -36,6 +38,7 @@ CREATE TABLE Position(
 --Tạo bảng nối Lương và chức vụ
 CREATE TABLE Salary_Position(
 	SPoID INT IDENTITY(1,1) PRIMARY KEY,--Mã bảng nối
+
 	--Tạo khóa ngoại nối với bảng lương bà bảng chức vụ
 	SID INT,
 	PoID INT,
@@ -51,6 +54,7 @@ CREATE TABLE Personnel(
 	DateOfBirth DATE,--NGày sinh
 	Literacy NVARCHAR(50),	
 	Date_Start DATE,--Ngày bắt đầu làm
+
 	--Khóa ngoại nối với bảng công việc
 	JID INT,
 	CONSTRAINT P_J_FK FOREIGN KEY (JID) REFERENCES Job(JID),
@@ -84,11 +88,12 @@ INSERT INTO Salary_Position VALUES (3,3,5000)
 INSERT INTO Department VALUES (N'Phòng IT',24)
 
 --insert vào bảng công việc
-INSERT INTO Job VALUES (N'Lập trình','Có bằng Đại Học',1)
+INSERT INTO Job VALUES (N'Lập trình',N'Có bằng Đại Học',1)
 
 --insert vào bảng nhân viên
-INSERT INTO Personnel VALUES (N'Nguyễn Văn A','2000-12-12',N'Tốt Ngiệp Đại Học','Nhân viên','2020-12-12',1,2)
+INSERT INTO Personnel VALUES (N'Nguyễn Văn A','2000-12-12',N'Tốt Ngiệp Đại Học','2020-12-12',1,2)
 
+SELECT * FROM Personnel
 
 select Personnel.P_Name, SalaryDetail.SalaryLever,  Position.P_Name, Salary FROM Personnel
 inner join Salary_Position ON
@@ -96,8 +101,18 @@ Personnel.SPoID = Salary_Position.SPoID
 inner join Position on
 Position.PoID = Salary_Position.PoID
 inner join SalaryDetail on
-Salary_Position.SID = SalaryDetail.SID WHERE PID = 2
+Salary_Position.SID = SalaryDetail.SID WHERE PID = 1
 
+SELECT Personnel.P_Name, D_Name, WorkingTime, J_Name, Salary, Position.P_Name FROM Position 
+JOIN Salary_Position ON 
+Position.PoID = Salary_Position.PoID
+JOIN Personnel ON 
+Salary_Position.SPoID = Personnel.SPoID
+JOIN Job ON 
+Personnel.JID = Job.JID
+JOIN Department ON Job.DID = Department.DID WHERE PID = 1
+
+/*ai ten j - lam o phong ban nao - time lam viec (thang) - ten cong viec - muc luong - chuc vu */
 
 
 SELECT * FROM Personnel
