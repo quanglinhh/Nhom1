@@ -37,7 +37,7 @@ USE FPTUniversity
 --Mã bảng nối(Khóa chính)
 --Mã bậc lương(Khóa ngoại)
 --Mã chức vụ(Khóa ngoại)
---Tiền lương
+--Tiền lương 
 
 --------Bảng nhân viên:
 --Mã NV (Khóa chính)

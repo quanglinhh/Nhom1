@@ -92,6 +92,38 @@ INSERT INTO Personnel VALUES (N'Nguyễn Văn A','2000-12-12',N'Tốt Ngiệp Đ
 INSERT INTO Personnel VALUES (N'Nguyễn Văn B','2000-12-12',N'Tốt Ngiệp Cao Đẳng','2020-12-12',2,5)
 INSERT INTO Personnel VALUES (N'Nguyễn Văn C','2000-12-12',N'Tốt Ngiệp Đại Học','2020-12-12',3,7)
 
+----+ Bổ sung\cập nhật hồ sơ nhân viên
+--Dùng UPDATE
+
+---+ Quản lý quyết định liên quan tới một nhân viên: thay đổi chức vụ, thay đổi bậc lương, chuyển công tác, ...
+--Qúa tuổi ---> điều chuyển công tác
+--Làm lâu + năng lực--> thay đổi bậc lương lên chức
+--Thay đổi bậc lương: không thể tăng bậc lương nếu không làm quá 5 tháng
+CREATE TRIGGER trg_Bacluong ON Personnel FOR UPDATE
+AS
+	IF (SELECT DATEDIFF(MONTH,(SELECT Date_Start FROM inserted),(SELECT GETDATE()))) < 5
+	BEGIN
+	PRINT N'Không thể tăng bậc lương nếu thời gian làm việc không quá 5 tháng'
+	ROLLBACK TRANSACTION
+END
+
+UPDATE Personnel
+SET SPoID = 5 WHERE PID = 1
+
+
+--+ Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
+--ứng viên cho công việc tư vấn tuyển sinh
+SELECT Personnel.P_Name FROM Position 
+JOIN Salary_Position ON 
+Position.PoID = Salary_Position.PoID
+JOIN Personnel ON 
+Salary_Position.SPoID = Personnel.SPoID
+JOIN Job ON 
+Personnel.JID = Job.JID
+JOIN Department ON Job.DID = Department.DID WHERE Literacy = N'Tốt Ngiệp Đại Học'
+
+
+--+ Thống kê về nhân sự theo các tiêu chí khác nhau"
 /*ai ten j - lam o phong ban nao - time lam viec (thang) - ten cong viec - muc luong - chuc vu */
 SELECT Personnel.P_Name, D_Name, WorkingTime, J_Name, Salary, Position.P_Name FROM Position 
 JOIN Salary_Position ON 
@@ -100,16 +132,18 @@ JOIN Personnel ON
 Salary_Position.SPoID = Personnel.SPoID
 JOIN Job ON 
 Personnel.JID = Job.JID
-JOIN Department ON Job.DID = Department.DID WHERE PID = 1
+JOIN Department ON Job.DID = Department.DID WHERE PID = 3
 
+------Thống kê nhân viên có bằng đại học
+select Personnel.P_Name from Personnel where Literacy = N'Tốt Ngiệp Đại Học'
 
-----+ Bổ sung\cập nhật hồ sơ nhân viên
---Dùng UPDATE
+-------Thống kê nhân viên lương trên 4000
+SELECT Personnel.P_Name, D_Name, WorkingTime, J_Name, Salary, Position.P_Name FROM Position 
+JOIN Salary_Position ON 
+Position.PoID = Salary_Position.PoID
+JOIN Personnel ON 
+Salary_Position.SPoID = Personnel.SPoID
+JOIN Job ON 
+Personnel.JID = Job.JID
+JOIN Department ON Job.DID = Department.DID WHERE Salary > 4000
 
----+ Quản lý quyết định liên quan tới một nhân viên: thay đổi chức vụ, thay đổi bậc lương, chuyển công tác, ...
---Qúa tuổi ---> điều chuyển công tác
---Làm lâu + năng lực--> thay đổi bậc lương lên chức
-
---+ Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
-
---+ Thống kê về nhân sự theo các tiêu chí khác nhau"
