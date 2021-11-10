@@ -50,6 +50,7 @@ USE FPTUniversity
 
 
 ++Bổ sung\cập nhật hồ sơ nhân viên
+--Các nhân 
 --Dùng UPDATE
 ++Quản lý bảng lương của nhân viên
 --SELECT tên nv, liên kết với bảng lương
