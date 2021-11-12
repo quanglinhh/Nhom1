@@ -10,19 +10,14 @@ và Nhân viên phòng Nhân sự thực hiện các công việc như:
 + Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
 + Thống kê về nhân sự theo các tiêu chí khác nhau"
 
+Create Database FPTUniversity
+go
+USE FPTUniversity
 
---------Bảng nhân viên:
---Mã NV (Khóa chính)
---Tên NV
---Ngày tháng năm sinh
---Vị trí (Trưởng phòng, nhân viên, ứng viên) or chức vụ
---Lương (Bậc lương -- mức 1 - 2 - 3)
---Trình độ học vấn (Đại học, cao đẳng, Tốt nghiệp Đại Học.....)
---Ngày ký hợp đồng
---Mã Công Việc(Khóa phụ)
-
-quan hệ: 1 nv ứng tuyển cho 1 cv
-         1 cv có nhiều nv
+--------Bảng phòng ban
+--Mã phòng ban
+--Tên phòng ban
+--Thời gian làm việc
 
 ---------Bảng Công Việc:
 --Mã Công Việc(Khóa chính)
@@ -30,15 +25,44 @@ quan hệ: 1 nv ứng tuyển cho 1 cv
 --Yêu cầu ứng tuyển ( Có bằng đại học, Có bằng cao đẳng...)
 --Mã Phòng Ban(Khóa phụ)
 
-quan hệ: ?
+--------Bảng bậc lương
+--Mã bậc lương
+--Bậc lương(Bậc 1, Bậc 2, Bậc 3)
 
---------Bảng Phòng ban:
---Mã Phòng Ban(Khóa chính)
---Tên phòng ban 
---Thời gian công tác 
---Trưởng phòng
---nhân viên của phòng (gồm những ai...)
+--------Bảng chức vụ
+--Mã chức vụ
+--Tên chức vụ
 
---nv liên kết - ứng tuyển cho 1 cv nào đó -- cv đấy thì sẽ thuộc 1 phòng ban nào đó
+--------Bảng nối giữa bậc lương và chức vụ
+--Mã bảng nối(Khóa chính)
+--Mã bậc lương(Khóa ngoại)
+--Mã chức vụ(Khóa ngoại)
+--Tiền lương
 
+--------Bảng nhân viên:
+--Mã NV (Khóa chính)
+--Tên NV
+--Ngày tháng năm sinh
+--Trình độ học vấn (Đại học, cao đẳng, Tốt nghiệp Đại Học.....)
+--Ngày ký hợp đồng
+--Mã Công Việc(Khóa phụ)
+--Mã bảng nối (1) (Khóa phụ)
+
+
+++Bổ sung\cập nhật hồ sơ nhân viên
+--Dùng UPDATE
+++Quản lý bảng lương của nhân viên
+--SELECT tên nv, liên kết với bảng lương
+--UPDATE nhân viên làm đủ lâu(trong 1 khoảng tgian cụ thể) sẽ tăng bậc lương
+++Quản lý thông tin về các phòng ban
+--
+++ Tìm kiếm nhân sự phù hợp với một công việc nào đó
+--ứng viên phù hợp với yêu cầu công việc
+++ Quản lý quyết định liên quan tới một nhân viên: thay đổi chức vụ, thay đổi bậc lương, chuyển công tác, ...
+--Qúa tgian công tác sẽ điều chuyển công tác (Dùng UPDATE)
+++ Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
+--SELECT 
+++ Thống kê về nhân sự theo các tiêu chí khác nhau"
+--Tìm nhân sự có bằng đại học
+--Tìm nhân sự làm lâu năm.......
 
