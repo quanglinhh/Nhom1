@@ -147,3 +147,18 @@ JOIN Job ON
 Personnel.JID = Job.JID
 JOIN Department ON Job.DID = Department.DID WHERE Salary > 4000
 
+-- Tìm kiếm tt nhân viên theo ID 
+CREATE PROC Search_ID (@PID INT)
+AS
+BEGIN
+     SELECT Personnel.P_Name, D_Name, WorkingTime, J_Name, Salary, Position.P_Name FROM Position 
+	JOIN Salary_Position ON 
+	Position.PoID = Salary_Position.PoID
+	JOIN Personnel ON 
+	Salary_Position.SPoID = Personnel.SPoID
+	JOIN Job ON 
+	Personnel.JID = Job.JID
+	JOIN Department ON Job.DID = Department.DID WHERE PID = @PID
+END
+
+EXEC Search_ID '1'
