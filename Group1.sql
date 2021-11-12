@@ -93,23 +93,23 @@ INSERT INTO Personnel VALUES (N'Nguyễn Văn B','2000-12-12',N'Tốt Ngiệp Ca
 INSERT INTO Personnel VALUES (N'Nguyễn Văn C','2000-12-12',N'Tốt Ngiệp Đại Học','2020-12-12',3,7)
 
 ----+ Bổ sung\cập nhật hồ sơ nhân viên
---Dùng UPDATE
+--Cập nhật lại ngày tháng năm sinh của nhân viên có PID = 2
+UPDATE Personnel
+SET DateOfBirth = '1998-12-12' WHERE PID = 2
+SELECT * FROM Personnel
 
 ---+ Quản lý quyết định liên quan tới một nhân viên: thay đổi chức vụ, thay đổi bậc lương, chuyển công tác, ...
---Qúa tuổi ---> điều chuyển công tác
---Làm lâu + năng lực--> thay đổi bậc lương lên chức
---Thay đổi bậc lương: không thể tăng bậc lương nếu không làm quá 5 tháng
-CREATE TRIGGER trg_Bacluong ON Personnel FOR UPDATE
-AS
-	IF (SELECT DATEDIFF(MONTH,(SELECT Date_Start FROM inserted),(SELECT GETDATE()))) < 5
-	BEGIN
-	PRINT N'Không thể tăng bậc lương nếu thời gian làm việc không quá 5 tháng'
-	ROLLBACK TRANSACTION
-END
-
+--Điều chyển nhân viên trên 40 tuổi sang phòng đào tạo
 UPDATE Personnel
-SET SPoID = 5 WHERE PID = 1
+SET JID = 3 WHERE YEAR(GETDATE()) - YEAR(Personnel.DateOfBirth) > 40
 
+DROP TRIGGER trg_DieuChuyenCongTac
+--Thay đổi bậc lương cho nhân viên làm sau 1 năm
+--
+INSERT INTO Personnel VALUES (N'Trần Văn C','2000-12-12',N'Tốt Ngiệp Đại Học','2019-12-12',1,2)
+--
+UPDATE Personnel
+SET SPoID = SPoID+3 WHERE YEAR(GETDATE()) - YEAR(Personnel.Date_Start) >1
 
 --+ Quản lý hồ sơ các ứng viên (những người dự tuyển vào một vị trí nào đó)
 --ứng viên cho công việc tư vấn tuyển sinh
@@ -162,3 +162,23 @@ BEGIN
 END
 
 EXEC Search_ID '1'
+--Không thể xóa thông tin nhân viên trên 40 tuổi
+CREATE TRIGGER trg_PersonnelDelete ON Personnel FOR DELETE
+AS
+	BEGIN
+	DECLARE @Count INT = 0
+	SELECT @Count = COUNT(*) FROM deleted
+	WHERE YEAR(GETDATE()) - YEAR(deleted.DateOfBirth) > 40
+	IF (@Count > 0)
+	BEGIn
+	PRINT N'Không thể xóa thông tin nhân viên trên 40 tuổi'
+	ROLLBACK TRANSACTION
+	END
+END
+--INSERT NGƯỜI TÊN 40 TUỔI
+INSERT INTO Personnel VALUES (N'Trần Văn C','1977-12-12',N'Tốt Ngiệp Đại Học','2019-12-12',1,2)
+
+--
+SELECT * FROM Personnel
+--XÓA THỬ
+DELETE FROM Personnel WHERE PID = 7
