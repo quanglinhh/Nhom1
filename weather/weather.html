@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather</title>
-
+    <link rel="stylesheet" type="text/css" href="css/weather.css">
+    <script src="js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <div >
-            <input type="text" name="city" id="city" placeholder="Enter city name">
+    <div class="container">
+        <div class= "main-info">
+            <div class="search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" name="city" id="city" placeholder="Enter city name">
+            </div>
+            <p class="city-name" id="cityName"></p>
+            <p class="weather-state" id="description"></p>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <p class="temperature" id="temp"></p>
         </div>
-    </header>
-    <div>
-        <span id="cityName"></span><br>
-        <span id="temp"></span><br>
-        <span id ="description"></span><br>
-        <span id ="cloud"></span><br>
-        <span id ="humidity"></span><br>
+        <div class="additional-info">
+            <div class="row">
+                <div class="item">
+                    <div class="label">Cloud: </div>
+                    <div class="value1" id="cloud"></div>
+                </div>
+                <div class="item">
+                    <div class="label">Wind: </div>
+                    <div class="value2" id="wind"></div>
+                </div>
 
-    </div>
-
-    <script type="text/javascript" src="js/weather.js"></script>
-</body>
-</html>
+                </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Humidity: </div>
+                    <div class="value1" id="humidity"></div>
+                </div>
+                <div class="item">
+                    <div class="label">Pressure: </div>
+                    <div class="value3" id="pressure"></div>
+                </div>
+            </div>
+         </div>
+     </div>
+     <script type="text/javascript" src="js/weather.js"></script>
+ </body>
+ </html>

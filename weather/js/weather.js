@@ -14,6 +14,9 @@ const temp = document.getElementById("temp");
 const Description = document.getElementById("description");
 const cloud = document.getElementById("cloud")
 const humidity = document.getElementById("humidity")
+const wind = document.getElementById("wind")
+const pressure = document.getElementById("pressure")
+
 
 function loadWeather(city){
     var weather_API = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=c8e69a70e46e8bf8c295679e86315c5f&units=metric";
@@ -27,6 +30,8 @@ function loadWeather(city){
         Description.innerHTML = data.weather[0].description;
         cloud.innerHTML =data.clouds.all;
         humidity.innerHTML =data.main.humidity;
+        wind.innerHTML =data.wind.speed;
+        pressure.innerHTML = data.main.pressure;
 
     };
     xhr.send();
