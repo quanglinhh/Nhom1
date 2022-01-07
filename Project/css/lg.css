@@ -1,0 +1,99 @@
+body{
+    background-color: #192536;
+    background-size: cover;
+}
+#wrapper{
+    display:flex; /* dùng để căn chỉnh phần tử bên trong một cách dễ dàng */
+     min-height: 100vh;
+     justify-content: center;
+     align-items: center;
+}
+#form-login{ /*định nghĩa form login*/
+    background-color: #21324a;
+    max-width: 290px;
+    flex-grow: 1; /*cho max width về đúng kích thước */
+    padding: 30px 30px 50px 50px;
+    box-shadow: 0px 0px 5px rgb(163, 160, 159); /*làm nổi viền box*/
+}
+.form-heading{
+    font-size: 12px;
+    color: aliceblue;
+    margin-top: 20px;
+
+}
+#logo{
+    margin-left: 70px;
+}
+.form-group{
+    border-bottom: 1px solid floralwhite; /*định nghĩa viền dưới*/
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex; /* căn chỉnh phần tử trong thẻ*/
+}
+
+.form-input{ /*địmh dạng phần tử trong ô input */
+    border: 1px;
+    outline: 0px;
+    background-color: rgb(100 112 128 / 1);
+    background: transparent;
+    color:aliceblue;
+    flex-grow: 1; /* chỉnh ô đăng nhập vừa width */
+}
+.submit{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px; /* bo viền khung */
+    background-color: #21b685;
+    display: block;
+    line-height: 40px;
+    text-align: center; /* căn chữ vào giữa*/
+    margin-top: 18px;
+    border: none;
+    color: honeydew;
+}
+.box-login{
+    display: block;
+    /*display:flex;  dùng để căn chỉnh phần tử bên trong một cách dễ dàng */
+    width: 370px;
+    height: 165px;
+    background-color: #21324a;
+    border-radius: 5px; /* bo viền khung*/
+    margin-left: 12.2cm;
+    margin-top: -3cm;
+    box-shadow: 0px 0px 5px rgb(163, 160, 159); /*làm nổi viền box*/
+   
+}
+#login-2{
+    display: block;
+    padding: 10px 8px 10px 10px;
+}
+.box-login p{
+    
+    margin-left: 3.4cm;
+    color: antiquewhite;
+    font-size: 13px;
+    
+}
+.box-login p.top{
+    display: block;
+    margin-top: 10px;
+}
+
+.box-login ul li{
+    display: block; /*tác động căn chỉnh padding*/
+    padding: 8px 15px;
+    text-decoration: none;
+    color: rgb(35, 98, 156);
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 250px;
+    margin-left: cm;
+    margin-top:-10px
+}
+.box-login ul li a{
+    text-decoration: none;
+    color: rgb(47, 88, 177);
+}
+
+
+

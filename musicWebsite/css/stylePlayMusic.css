@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+.text-box{
+    float: right;
+}
+
+ul li{
+    float: left;
+    width: 100px;
+    text-transform: capitalize;
+    list-style-type: none;
+    font-family: "Poppins",sans-serif;
+
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+ul li a:hover{
+    color: #9f593f;
+}
+b{
+    color: hotpink;
+    border-bottom: 2px solid hotpink;
+    font-weight: normal;
+}
+
+body{
+    background: url("img/musical-background-2886886_960_720.jpg");
+    background-size: cover;
+
+}
+
+.cover{
+    border: 1px solid black;
+    text-align: center;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px 7px;
+    opacity: 0.6;
+}
+
+.subcover{
+    border-bottom: 1px ;
+    background: black;
+    width: 300px;
+    height: 450px;
+    opacity: 0.6;
+    border-radius: 8px;
+}
+.cover .icon-pause {
+    display: none;
+}
+.cover-image{
+    text-align: center;
+}
+.cover.playing .icon-pause {
+    display: inline-block;
+}
+
+.cover.playing .icon-play {
+    display: none;
+}
+
+img{
+   border-radius: 20px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    margin: -10px -9px;
+    opacity: 0.7;
+}
+.text{
+    position: absolute;
+    left: 26%;
+    top: 52%;
+    margin: -1px 10px;
+}
+h1{
+    color: white;
+    font-family: "Poppins",sans-serif;
+    line-height: 7px;
+    font-weight: normal;
+    text-align: left;
+    font-size: 20px;
+
+
+}
+
+h2{
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    opacity: 0.3;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+.range{
+    top: 75%;
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+/* CONTROL */
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+
+.control .btn {
+    color: black;
+    padding: 18px;
+    font-size: 18px;
+
+}
+
+.control .btn.active {
+    color: red;
+}
+
+.control .btn-toggle-play {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.progress {
+    width: 90%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: red;
+    cursor: pointer;
+}
+.play-list{
+    border: 1px solid black;
+    text-align: center;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px 7px;
+    opacity: 0.6;
+    overflow: auto;
+}
+.song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 25%;
+    background-size: cover;
+    margin: 0 8px;
+}
+.song.active {
+    background: red;
+}
+.song:active {
+    opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title{
+    color: #fff;
+}
+.option{
+    position: absolute;
+    right: 5%;
+}
