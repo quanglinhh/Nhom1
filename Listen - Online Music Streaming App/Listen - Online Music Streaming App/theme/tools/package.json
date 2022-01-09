@@ -1,0 +1,42 @@
+{
+    "name": "listen-app",
+    "version": "1.0.0",
+    "description": "Online Music Streaming App",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "kri8thm <kri8thm@gmail.com> (kri8thm.com)",
+    "license": "ISC",
+    "dependencies": {
+        "amplitudejs": "^4.1.0",
+        "bootstrap": "^4.3.1",
+        "chart.js": "^2.8.0",
+        "ionicons": "^4.5.5",
+        "jquery": "^3.3.1",
+        "jquery-countdown-timer": "^0.1.0",
+        "jquery.cookie": "^1.4.1",
+        "moment": "^2.24.0",
+        "perfect-scrollbar": "^1.4.0",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.3",
+        "del": "^4.0.0",
+        "gulp": "3.9.1",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-if": "^2.0.2",
+        "gulp-rewrite-css": "^1.1.2",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify-es": "^1.0.4",
+        "gulp-util": "^3.0.8",
+        "lazypipe": "^1.0.2",
+        "path": "^0.12.7",
+        "require-dir": "^1.2.0",
+        "run-sequence": "^2.2.1"
+    }
+}

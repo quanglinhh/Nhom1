@@ -1,0 +1,138 @@
+{
+    "config": {
+        "compile": {
+            "htmlMinify": false,
+            "jsUglify": false,
+            "cssMinify": false,
+            "jsSourcemaps": false,
+            "cssSourcemaps": false
+        },
+        "path": {
+            "src": "./../src",
+            "node_modules": "./node_modules",
+            "dist": "./../dist"
+        },
+        "dist": [
+            "./../dist"
+        ]
+    },
+    "build": {
+        "vendors": {
+            "base": {
+                "src": {
+                    "mandatory": {
+                        "jquery": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery/dist/jquery.js"
+                            ]
+                        },
+                        "bootstrap": {
+                            "styles": [
+                                "{$config.path.src}/vendors/bootstrap/bootstrap.scss"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/bootstrap/dist/js/bootstrap.bundle.min.js"
+                            ]
+                        },
+                        "amplitude-js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/amplitudejs/dist/amplitude.min.js"
+                            ]
+                        },
+                        "cookie": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery.cookie/jquery.cookie.js"
+                            ]
+                        },
+                        "moment": {
+                            "scripts": [
+                                "{$config.path.node_modules}/moment/min/moment.min.js"
+                            ]
+                        },
+                        "perfect-scrollbar": {
+                            "styles": [
+                                "{$config.path.node_modules}/perfect-scrollbar/css/perfect-scrollbar.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/perfect-scrollbar/dist/perfect-scrollbar.js"
+                            ]
+                        }
+                    },
+                    "optional": {
+                        "chart.js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/chart.js/dist/Chart.bundle.min.js"
+                            ]
+                        },
+                        "ionicons": {
+                            "styles": [
+                                "{$config.path.node_modules}/ionicons/dist/css/ionicons.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/ionicons/dist/fonts/**/*"
+                            ]
+                        },
+                        "line-awesome":{
+                            "styles": [
+                                "{$config.path.src}/vendors/line-awesome/css/line-awesome.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/vendors/line-awesome/fonts/**"
+                            ]
+                        },
+                        "jquery-countdown-timer": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery-countdown-timer/countdown-timer.min.js"
+                            ]
+                        },
+                        "slick-carousel": {
+                            "styles": [
+                                "{$config.path.node_modules}/slick-carousel/slick/slick.css",
+                                "{$config.path.node_modules}/slick-carousel/slick/slick-theme.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/slick-carousel/slick/slick.min.js"
+                            ],
+                            "images": [
+                                "{$config.path.node_modules}/slick-carousel/slick/ajax-loader.gif"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/slick-carousel/slick/fonts/**"
+                            ]
+                        }
+                    }
+                },
+                "bundle": {
+                    "styles": "{$config.output}/assets/css/vendors.bundle.css",
+                    "scripts": "{$config.output}/assets/js/vendors.bundle.js",
+                    "images": "{$config.output}/assets/images",
+                    "fonts": "{$config.output}/assets/fonts"
+                }
+            }
+        },
+        "preview": {
+            "base": {
+                "src": {
+                    "styles": [
+                        "{$config.path.src}/assets/scss/styles.scss"
+                    ],
+                    "scripts": [
+                        "{$config.path.src}/assets/js/**/*.js"
+                    ]
+                },
+                "bundle": {
+                    "styles": "{$config.output}/assets/css/styles.bundle.css",
+                    "scripts": "{$config.output}/assets/js/scripts.bundle.js"
+                }
+            },
+            "files": {
+                "src": {
+                    "audio": ["{$config.path.src}/assets/audio/**/*"],
+                    "images": ["{$config.path.src}/assets/images/**/*"],
+                    "html": ["{$config.path.src}/**/*.html"]
+                },
+                "output": { }
+            }
+        }
+    }
+}
