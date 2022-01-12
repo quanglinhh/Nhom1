@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce992a58-b258-4133-96cf-3fc706987a91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project/PlayMusic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/js/musicWorld.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/js/music.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon_fb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon_google.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keeng_ver5_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/musicWebsite/js/PlayMusic.js" beforeDir="false" afterPath="$PROJECT_DIR$/musicWebsite/js/PlayMusic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bai tap/HTML-exercise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -96,6 +84,14 @@
       <workItem from="1641218786298" duration="3854000" />
       <workItem from="1641222856974" duration="14000" />
       <workItem from="1641263074238" duration="34000" />
+      <workItem from="1641913054584" duration="401000" />
+      <workItem from="1641914532319" duration="133000" />
+      <workItem from="1641918963591" duration="201000" />
+      <workItem from="1641949500810" duration="66000" />
+      <workItem from="1641968677090" duration="95000" />
+      <workItem from="1641968855358" duration="381000" />
+      <workItem from="1641969384424" duration="1647000" />
+      <workItem from="1641971581672" duration="1282000" />
     </task>
     <servers />
   </component>

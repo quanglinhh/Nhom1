@@ -227,3 +227,4 @@ const app ={
     }
 }
 app.start()
+console.log(songs)
