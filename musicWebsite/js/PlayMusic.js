@@ -14,44 +14,35 @@ const prevBtn = $('.btn-prev')
 const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
 const playList = $('.playlist')
+//Addmusic
+var songsApi = "http://localhost:3000/songs";
+
+//Function
+function starts(){
+    getSongs(renderSongs)
+};
+starts();
+function getSongs(callback){
+    fetch(songsApi)
+        .then(function(response){
+            return response.json();
+        })
+        .then(callback)   
+    }
+ 
+function renderSongs(songss){
+    var songs =[]
+    for( var i =0; i < songss.length; i++){
+        songs.push(songss[i]) 
+    }      
 
 const app ={
     currentIndex:0,
     isPlaying: false,
     isRandom:false,
     isRepeat:false,
-    songs:[
-            {
-                name: "All that",
-                singer: "unknow",
-                path: "Assets/Music/bensound-allthat.mp3",
-                image: "Assets/img/allthat.jpg"
-            },
-            {
-                name: "Jazz Comedy",
-                singer: "unknow",
-                path: "Assets/Music/bensound-jazzcomedy.mp3",
-                image: "Assets/img/jazzcomedy.jpg"
-            },
-            {
-                name: "Jazzy Frenchy",
-                singer: "unknow",
-                path: "Assets/Music/bensound-jazzyfrenchy.mp3",
-                image: "Assets/img/jazzyfrenchy.jpg"
-            },
-            {
-                name: "love",
-                singer: "unknow",
-                path: "Assets/Music/bensound-love.mp3",
-                image: "Assets/img/love.jpg"
-            },
-            {
-                name: "The Jazz piano",
-                singer: "unknow",
-                path: "Assets/Music/bensound-thejazzpiano.mp3",
-                image: "Assets/img/thejazzpiano.jpg"
-            },
-        ],
+    songs,
+   
     render: function (){
         const htmls = this.songs.map((song , index) =>{
             return`
@@ -213,6 +204,7 @@ const app ={
         this.loadCurrentSong()
     },
     start: function (){
+        console.log(this.songs);
         //Định nghĩa các thuộc tính cho Object
         this.defineProperties()
 
@@ -226,5 +218,6 @@ const app ={
         this.render()
     }
 }
-app.start()
-console.log(songs)
+app.start() 
+}
+

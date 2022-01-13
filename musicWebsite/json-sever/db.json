@@ -1,0 +1,55 @@
+{
+    "songs": [
+        {
+            "id":1,
+           "name": "All that",
+            "singer": "unknow",
+            "path": "Assets/Music/bensound-allthat.mp3",
+            "image": "Assets/img/allthat.jpg",
+            "composer":"unknow",
+            "Genres":"jazz",
+            "Album":"jazz"
+
+        },
+        {
+            "id":2,
+            "name": "Jazz Comedy",
+            "singer": "unknow",
+            "path": "Assets/Music/bensound-jazzcomedy.mp3",
+            "image": "Assets/img/jazzcomedy.jpg",
+            "composer":"unknow",
+            "Genres":"jazz",
+            "Album":"jazz"
+        },
+        {
+            "id": 3,
+            "name": "Jazzy Frenchy",
+            "singer": "unknow",
+            "path": "Assets/Music/bensound-jazzyfrenchy.mp3",
+            "image": "Assets/img/jazzyfrenchy.jpg",
+            "composer":"unknow",
+            "Genres":"jazz",
+            "Album":"jazz"
+        },
+        {
+            "id":4,
+            "name": "love",
+            "singer": "unknow",
+            "path": "Assets/Music/bensound-love.mp3",
+            "image": "Assets/img/love.jpg",
+            "composer":"unknow",
+            "Genres":"jazz",
+            "Album":"jazz"
+        },
+        {
+            "id":5,
+            "name": "The Jazz piano",
+            "singer": "unknow",
+            "path": "Assets/Music/bensound-thejazzpiano.mp3",
+            "image": "Assets/img/thejazzpiano.jpg",
+            "composer":"unknow",
+            "Genres":"jazz",
+            "Album":"jazz"
+        }
+    ]
+}
