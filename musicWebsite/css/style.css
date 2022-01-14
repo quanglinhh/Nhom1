@@ -1,0 +1,393 @@
+
+.body-sum{
+    background-color: #f6f6f6;
+    display: flex;
+}
+/* tab-menu*/
+
+.tab-menu{
+    width: 240px;
+    height:850px;
+    background-color: #f3f3f3;
+    
+}
+.logo-music{
+    margin-left: 0.5cm;
+    margin-top: 0.5cm;
+}
+.logo{
+    margin-left: 0.5cm;
+}
+.text-logo{
+    color: rgb(45, 85, 85);
+    display: block;
+    margin-top: -0.8cm;
+    margin-left: 1.7cm;
+    text-decoration: none;
+}
+.add-music{
+    background-color: rgb(199, 18, 18);
+    text-align:center;
+    border-radius: 4px;
+    width: 150px;
+    height: 40px;
+    margin-left: 0.5cm;
+}
+.ib{
+    text-decoration: none;
+    display: block;
+    padding: 12px 0;
+    color: aliceblue;
+}
+.menu-1 ul{
+    list-style: none;
+    border-bottom: 2px;
+    border-color: black;
+}
+.menu-2 ul{
+    list-style: none;
+}
+.menu-3 ul{
+    list-style: none;
+}
+.menu-1 ul li{
+    display: block;
+    padding: 5px 0px;
+}
+.menu-2 ul li{
+    display: block;
+    padding: 5px 0px;
+}
+.menu-3 ul li{
+    display: block;
+    padding: 5px 0px;
+    background-color: var(--bg-content-color);
+}
+.menu-1 ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+.menu-2 ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+.menu-3 ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+.text-box{
+    display: block;
+    font-size: 15px;
+    margin-left: 25px;
+}
+.menu-1 ul li a:hover{
+    background-color: rgb(197, 183, 183);
+}
+.menu-2 ul li a:hover{
+    background-color: rgb(197, 183, 183);
+}
+.menu-3 ul li a:hover{
+    background-color: rgb(197, 183, 183);
+}
+
+/* tab home */
+.search{
+    display: block;
+    width: 1150%;
+}
+.or-search{
+    height: 35px;
+    width: 500px;
+    display: block;
+    border:none;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 1cm;
+}
+#box{
+    margin-left: 4.1cm;
+    margin-top: 0.4cm;
+    display: block;
+}
+#id-box{
+    margin-top: 0.4cm;
+    display: block;
+}
+.input{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 20px;
+    /*background-color: rgb(177, 197, 191);*/
+    border-radius: 5px;
+}
+.input:hover{
+    color: #2daaed;
+}
+
+.login{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 20px;
+    background-color: rgb(177, 197, 191);
+    border-radius: 5px;
+
+}
+
+
+header{
+    display: flex;
+    height: 70px;
+    width: 1500px;
+    
+    margin-left: 3cm;
+}
+nav{
+    height: 372px;
+    max-width: 1150px;
+    margin-left: 3cm;
+    border-radius: 5px;
+}
+.dot-id{
+    width: 920px;
+}
+.dot {
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    background-color: rgb(36, 30, 30);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+#tab-menu{
+    width: 1150px;
+}
+.body-menu{
+    display: block;
+    width: 700px;
+}
+.img-music{
+    display: flex;
+    margin-left: 3cm;
+}
+.top-top{
+    display: flex; 
+    height: 60px;
+    
+}
+.input1{
+    margin-left: 12cm;
+    margin-top: 0.9cm; 
+    text-decoration: none;
+    padding: 5px 20px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    color:black ;
+    font-size: 13px;
+}
+.input1:hover{
+    color: #2daaed;
+}
+h1{
+    font-size: 20px;
+    margin-top: 0.2cm;
+    
+}
+h1 a{
+    margin-left:3cm;
+    display: block;
+    text-decoration: none;
+    color: #2daaed;
+    font-size: 20px;
+    margin-top: 0.7cm;
+}
+h3{
+    color: #838b83;
+}
+h3:hover{
+    color: #2daaed;
+}
+.card{
+    width: 150px; 
+}
+.container a{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: -0.3cm;
+    color: black;
+    font-size: 11px;
+}
+.chart1{
+    margin-top: 0.9cm;
+}
+.chart{
+
+
+    overflow: scroll;/*tạo thanh cuộn */
+    background-color: #eceaea;
+    width: 300px;
+    height: 330px;
+    margin-top: 0.7cm;
+    border-radius: 10px;
+    margin-left: 1cm;
+}
+
+.top-chart{
+    margin-left: 3cm;
+}
+.title-chart{
+    margin-left: 1cm;
+    height: 40px;
+    width: 330px;
+}
+.title1{
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #e74c3c;
+}
+.title{
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #c7c1c1;
+}
+.title:hover{
+    background-color: #e74c3c;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    color: #2daaed;
+    margin-left: 0.6cm;
+}
+#tab-menu{
+    display:flex;
+}
+.list--chart{
+    display: flex;
+    height: 30px;
+}
+.number-1{
+    margin-left: 0.2cm;
+    display: block;
+    margin-top: -0.15cm;
+    font-size: 30px;
+    color: #e74c3c;
+}
+.number-2{
+    margin-left: 0.2cm;
+    display: block;
+    margin-top: -0.15cm;
+    font-size: 30px;
+    color: #1bca1b;
+}
+.number-3{
+    margin-left: 0.25cm;
+    display: block;
+    margin-top: -0.15cm;
+    font-size: 28px;
+    color: #2162b8;
+}
+.number-4{
+    margin-left: 0.4cm;
+    display: block;
+    margin-top: -0.15cm;
+    font-size: 18px;
+    color: #0a0a0a;
+}
+h4{
+    margin-left: 1cm;
+    margin-top: -0.1cm;
+}
+.music-1:hover{
+    color: #2daaed;
+}
+.music-1{
+    color: black;
+}
+.singer:hover{
+    color: #2daaed;
+}
+.singer{
+    color: rgb(126, 119, 119);
+    font-size: 12.5px;
+}
+.play-list{
+    height: 100px;
+    width: 1280px;
+    background-color: #e9e3e3;
+}
+.play-list{
+    display: flex;
+    padding: 35px 50px;
+    width: 1190px;
+}
+.img-logo{
+    height: 80px;
+    width: 200px;
+    padding: 20px 80px;
+}
+.img1{
+    float: left;
+}
+.img-logo1{
+    display: flex;
+    width: 300px;
+}
+.img-logo p{
+    font-size: 12px;
+    display: block;
+    padding: 10px  10px;
+}
+.dylan{
+    height: 135px;
+    width: 300px;
+    padding:20px 80px;
+    display: flex;
+    margin-top: -1cm;
+}
+.lynn{
+    
+    height: 80px;
+    width: 200px;
+    padding: 20px 0px 90px 90px;
+    margin-top: -1cm;
+}
+.information1{
+    padding: 0px 30px;
+    
+}
+.mxh{
+    display: flex;
+    margin-left: 0.8cm;
+}
+.dow{
+    display: flex;
+}
+.text-footer{
+    color: #0a0a0a;
+}
+.information1 ul{
+    padding: 0 0;
+}
+.information1 ul li{
+    list-style: none;
+}
+.information1 ul li a{
+    color: #0a0a0a;
+}
+.information1 ul li a:hover{
+    color: #2daaed;
+}
