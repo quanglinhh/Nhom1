@@ -45,6 +45,7 @@ const app ={
    
     render: function (){
         const htmls = this.songs.map((song , index) =>{
+            if(song.Genres === "jazz"){
             return`
             <div class="song ${index === this.currentIndex? 'active':''}" data-index ="${index}">
                 <div class="thumb" style="background-image: url('${song.image}')">
@@ -58,7 +59,7 @@ const app ={
                 </div>
             </div>
             `
-        })
+        }})
         playList.innerHTML = htmls.join('')
     },
     defineProperties: function (){
@@ -167,7 +168,7 @@ const app ={
 
                 //Xủ lí khi click vào song option
                 if(e.target.closest('.option')){
-
+                        
                 }
             }
         }
