@@ -15,7 +15,7 @@ const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
 const playList = $('.playlist')
 //Addmusic
-var songsApi = "http://localhost:3000/songs";
+var songsApi = "https://music-world-g1.herokuapp.com/songs";
 
 //Function
 function starts(){
