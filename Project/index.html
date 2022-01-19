@@ -1,137 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music word</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>MusicWorld</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
-<header>
-  <div id="warppar">
-    <div id="header">
-      <nav class="container">
-        <a href="" id="logo">
-          <img src="img/lg.png" alt="">
-        </a>
-        <ul id="main-menu">
-          <li><a href="">Chủ đề</a>
-            <ul class="sub-menu">
-              <li><a href="">Nhạc Jazz</a></li>
-              <li><a href="">Nhạc Pop</a></li>
-              <li><a href="">Nhạc quốc tế</a>
-                <ul class="sub-menu">
-                  <li><a href="">Âu Mỹ</a></li>
-                  <li><a href="">Hàn Quốc</a></li>
-                </ul>
-              </li>
-              <li><a href="">Nhạc Rock</a>
-                
-              </li>
-            </ul>        
-          </li>
-          <li><a href="">Album</a>
-            <ul class="sub-menu">
-              <li><a href="">Menu2.1</a></li>
-              <li><a href="">Menu2.2</a></li>
-              <li><a href="">Menu2.3</a></li>
-              <li><a href="">Menu2.4</a></li>
-            </ul>
-          </li>
-          <li><a href="">Thể loại</a>
-            <ul class="sub-menu">
-              <li><a href="">Menu2.1</a></li>
-              <li><a href="">Menu2.2</a></li>
-              <li><a href="">Menu2.3</a></li>
-              <li><a href="">Menu2.4</a></li>
-            </ul>
-          
-          </li>
-          <li><a href="">Ca Sĩ</a>
-            <ul class="sub-menu">
-              <li><a href="">Menu2.1</a></li>
-              <li><a href="">Menu2.2</a></li>
-              <li><a href="">Menu2.3</a></li>
-              <li><a href="">Menu2.4</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class ="form-search">
-          <input placeholder="Từ khóa tìm kiếm..." class="search-txtsearchInput" id="search_query" type="text" name="q" autocomplete="off" tabindex="0" value="">
-          
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar">
+                <div class="logo">
+                    <h1>
+                        MusicWorld
+                    </h1>
+                </div>.
+                <div class="header__sigin">
+                    <button class="button header__signInBtn">Sign in</button>
+                    <button class="button header__signUpBtn">Ceate account</button>
+                    <a href="">For Creators</a>
+                </div>
+            </nav>
+            <div class="header__content">
+                <h2 class="header__title">Connect on MusicWorld</h2>
+                <p class="header__tagline">Discover, stream, and share a constantly expanding mix of music <br><br>from emerging and major artists around the world.</p>
+                <button class="button header__signUpBtn header__signUpBtn--content">Sign up for free</button>
+            </div>
+        </header>
+        <!--SEARCH-->
+        <div class="search">
+            <div class="search-bar">
+                <div class="search-bar-input-wrap">
+                    <input class="search-bar-input" type="text" placeholder="Search for artists, bands, tracks, podcasts">
+                </div>
+                <button class="search-btn"><i class="fas fa-search search-btn-icon"></i></button>
+            </div>
+            <h1 class="search__title">Hear what's trending for free in the SoundCloud community</h1>
         </div>
-        <div class="search-btn"><img src="img/keeng_ver5_01.png"></div>
-        <div id="input">
-          <a href="login.html">Đăng Nhập</a>
-          <a href="login.html">Đăng kí</a>
+        <!--CONTAINER-->
+        <div class="container">
+            <div class="trendingTrack">
+                <div class="trendingTrack__row">
+                    <!--PAGE-LIST-ITEM-->
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                    <div class="pageList-item">
+                        <div class="pageList-item__head">
+                            <div class="pageList-item__img" style="background-image: url(https://i1.sndcdn.com/artworks-z2gxcCZamslfRFWy-mSu93g-t500x500.jpg)"></div>
+                                            <!--ACTION-->
+                           <!-- <div class="pageList-item__action">
+                                <div class="pageList-item__option">
+                                    <i class="fas fa-heart pageList-item__like"></i>
+                                    <i class="fas fa-ellipsis-h pageList-item__more"></i>
+                                </div>
+                                <button class="pageList-item__play">
+                                    <i class="fas fa-play pageList-item__play--icon"></i>
+                                </button>             
+                            </div>  -->
+                        </div>
+                        <div class="pageList-item__body">
+                            <a class="pageList-item__name" href="">Đen - Mang Tiền Về Cho Mẹ ft. Nguyên Thảo</a><br>
+                            <a class="pageList-item__singer" href="">Den vau</a>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="explore-trending">
+                <a href="" class="btn explore-trending__btn">Explore trending playlists</a>
+            </div>
         </div>
-      </nav>
+        <div class="frontMobileTeaser">
+            <div class="frontMobileTeaser__devices">
+
+            </div>
+            <div></div>
+        </div>
+        <footer class="footer"> 
+
+        </footer>
     </div>
-  </div>
-  </header>
-<div>
-  <div class="box-title">
-      <h2 class="name">
-        <a href="">Album</a>
-      </h2>
-  </div>
-  <div class="box-content">
-    <ul>
-      <li class="album-items">
-        <div >
-          <a href="">ALBUM1</a>
-        </div>
-        <div class="album-name">
-          ALBUM NAME
-        </div>
-      </li>
-      <li class="album-items">
-        <div >
-          <a href="">ALBUM1</a>
-        </div>
-        <div class="album-name">
-          ALBUM NAME
-        </div>
-      </li>
-      <li class="album-items">
-        <div >
-          <a href="">ALBUM1</a>
-        </div>
-        <div class="album-name">
-          ALBUM NAME
-        </div>
-      </li>
-      <li class="album-items">
-        <div >
-          <a href="">ALBUM1</a>
-        </div>
-        <div class="album-name">
-          ALBUM NAME
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-<div>
-  <div class="box-title">
-    <h2>
-      <a href="">Bài hát mới phát hành</a>
-    </h2>
-  </div>
-  <div class="box-content">
-    <ul>
-      <li><a href="">Bài hát 1</a>
-      <div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-      <li><a href="">Bài hát 1</a><div>Tên bài hát</div></li>
-    </ul>
-  </div>
-</div>
+    <div class="btn-account">
+         <div class="modal">
+        
+             <div class="modal__overlay"></div>
+            <div class="modal__body">  
+                <!--Register form-->
+                  <div class="auth-form sigUp-form">
+                    <div class="auth-form__contairer">
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập tài khoản đăng ký">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                            </div>
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">
+                                    When registering, you agree that we may use your provided data for the registration
+                                        and to send you notifications on our products and services. You can unsubscribe from 
+                                        notifications at any time in your settings. For additional info 
+                                        please refer to our <a href="" class="auth-form__policy-link">Privacy Policy.</a>
+                                </p>
+                            </div>
+                            <div>
+                                    <div class="auth-form__controls">
+                                        <button class="btn auth-form__controls-back">Return</button>
+                                        <button class="btn btn--primary">Register</button>
+                                    </div>
+                                    <div class="auth-form__socials">
+                                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                        <i class="fab fa-facebook auth-form__socials-icon"></i>
+                                        <span class="auth-form__socials-lable-title">  Continue with Facebook </span>
+                                    </a>
+                                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                        <i class="fab fa-google auth-form__socials-icon"></i>
+                                        <span class="auth-form__socials-lable-title"> Continue with Google</span>
+                                    </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                
+                 <!--Login form-->
+                 <div class="auth-form login-form">
+                    <div class="auth-form__contairer">
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Enter your account">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Enter your password">
+                            </div>
+                            <div class="auth-form__aside">
+                                <div class="auth-form__help">
+                                    <a href="" class=" auth-form__help--forgot">Forgot password?</a>
+                                    <span class="auth-form__help-separate"></span>
+                                    <a href="" class="auth-form__help-link">You need help?</a>
+                                </div>
+                            </div>
+                            <div>
+                                    <div class="auth-form__controls">
+                                        <button class="btn auth-form__controls-back">Return</button>
+                                        <button class="btn btn--primary">Login</button>
+                                    </div>
+                                    <div class="auth-form__socials">
+                                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                        <i class="fab fa-facebook auth-form__socials-icon"></i>
+                                        <span class="auth-form__socials-lable-title">  Continue with Facebook </span>
+                                    </a>
+                                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                        <i class="fab fa-google auth-form__socials-icon"></i>
+                                        <span class="auth-form__socials-lable-title"> Continue with Google</span>
+                                    </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div> 
+    </div>
+   
+
 </body>
-<script src="js/musicWorld.js"></script>
+<script src="./assets/js/main.js"></script>
 </html>

@@ -1,0 +1,291 @@
+.header {
+  width: 1242px;
+  height: 453px;
+  margin-left: 0px;
+  background: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg)
+    50% / cover no-repeat;
+  color: white;
+  position: relative;
+  border-top: solid #f50;
+}
+
+.header__navbar {
+  display: inline;
+}
+
+.logo {
+  width: 163px;
+  height: 23px;
+  top: 25px;
+  left: 29px;
+  position: absolute;
+}
+.header__sigin {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: opacity 0.2s ease;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.header__signInBtn {
+  background-color: #030303;
+  color: #fff;
+  border-style: solid;
+  border-width: thin;
+  border-color: #fff;
+  margin-left: 10px;
+}
+.header__signUpBtn {
+  background-color: #ff5500;
+  color: #fff;
+}
+
+/*Authen modal */
+.auth-form {
+  width: 600px;
+  height: 100%;
+}
+.auth-form__contairer {
+  padding: 0 32px;
+}
+.auth-form__form {
+  margin-top: 8px;
+}
+.auth-form__input {
+  width: 100%;
+  height: 40px;
+  margin: 16px;
+  font-size: 1.4rem;
+  padding: 0 12px;
+  border-color: var(--border-color);
+  margin-left: 4px;
+  border-radius: 2px;
+}
+.auth-form__input :focus {
+  border-color: #888;
+}
+.btn--with-icon {
+  color: var(--text-color);
+}
+.auth-form__policy-tex {
+  color: var(--text-color);
+}
+
+.auth-form__group {
+  text-align: center;
+}
+
+.auth-form__controls {
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+.auth-form__controls-back {
+  margin-right: 8px;
+}
+.auth-form__socials {
+  background-color: #f5f5f5;
+  margin-left: -26px;
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+.auth-form__socials-icon {
+  font-size: 2rem;
+}
+.auth-form__socials--facebook {
+  color: var(--white-color);
+  background-color: hsl(217deg 77% 55%);
+}
+.auth-form__socials--google {
+  background-color: var(--white-color);
+  color: #666;
+  border: solid #666;
+}
+.auth-form__socials-lable-title {
+  margin: 0 26px;
+}
+.auth-form__help {
+  display: flex;
+  justify-content: flex-end;
+}
+.auth-form__help-link {
+  color: var(--text-color);
+}
+.auth-form__help-separate {
+  display: block;
+  margin: 0 16px;
+  border-left: 1px solid black;
+}
+.auth-form__help--forgot {
+  color: #f50;
+  font-size: 15px;
+}
+.auth-form__help-link {
+  color: hsl(217deg 77% 55%);
+  font-size: 15px;
+}
+/*Header title*/
+.header__content {
+  text-align: center;
+  margin-top: 147px;
+}
+.header__title {
+  font-size: 3.5rem;
+}
+.header__tagline {
+  font-size: 1.7rem;
+  padding-top: 5px;
+}
+.header__signUpBtn--content {
+  font-size: 18px;
+  height: 48px;
+  margin-top: 30px;
+}
+
+/*SearchBar*/
+.search__title {
+  margin-top: 32px;
+  margin-left: 300px;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.search-bar {
+  height: 47px;
+  width: 602px;
+  margin-top: 48px;
+  display: flex;
+  margin-left: 321px;
+  border-radius: 2px;
+  background-color: rgb(242 242 242);
+}
+.search-bar-input {
+  width: 536px;
+  height: 100%;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  background-color: rgb(242 242 242);
+  outline: none;
+}
+.search-btn-icon {
+  font-size: 2.5rem;
+  position: absolute;
+  color: var(--text-color);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.search-btn {
+  background-color: rgb(242 242 242);
+  border: none;
+  width: 66px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.search-bar-input-wrap {
+  flex: 1;
+  height: 100%;
+}
+/*CONTAINER*/
+.container {
+  margin-top: 32px;
+}
+.pageList-item {
+  width: 181px;
+  height: 223px;
+  flex-basis: 19%;
+  margin-top: 35px;
+}
+.pageList-item__head {
+  height: 182px;
+  width: 100%;
+}
+.pageList-item__img {
+  padding-top: 100%;
+  background-size: 182px;
+  background-repeat: no-repeat;
+}
+.pageList-item__body {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+}
+.pageList-item__name {
+  color: var(--text-color);
+}
+.pageList-item__singer {
+}
+.pageList-item__option {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 90%;
+  right: 1%;
+  justify-content: space-between;
+}
+.pageList-item__more {
+}
+.pageList-item__like {
+  margin-right: 5px;
+}
+.pageList-item__play {
+  font-size: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border: none;
+}
+.pageList-item__play--icon {
+  color: var(--primary-color);
+}
+.pageList-item__body {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  width: 184px;
+}
+.pageList-item__singer {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+.trendingTrack__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 35px;
+}
+.explore-trending {
+  margin-left: 495px;
+  margin-top: 42px;
+  margin-bottom: 68px;
+}
+.explore-trending__btn {
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  width: 253px;
+  height: 48px;
+}
+.btn-account {
+  display: none;
+}
