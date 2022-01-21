@@ -6,11 +6,9 @@
   --border-color: #dbdbdb;
   --primary-color: #f50;
 }
-
 * {
   box-sizing: inherit;
 }
-
 html {
   font-size: 62.5%;
   line-height: 1.6rem;
@@ -22,7 +20,7 @@ body {
 }
 .app {
   background-color: var(--white-color);
-  width: 1244px;
+  width: 1240px;
   position: relative;
   margin-left: 140px;
 }
@@ -31,11 +29,9 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
-
 .grid_full_width {
   width: 100%;
 }
-
 .grid__row {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +45,14 @@ body {
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes growth {
   from {
     transform: scale(var(--growth-from));
@@ -57,7 +61,15 @@ body {
     transform: scale(var(--growth-to));
   }
 }
-/*====Modal====*/
+@keyframes again {
+  from {
+    transform: scale(var(--again-from));
+  }
+  to {
+    transform: scale(var(--again-to));
+  }
+}
+/*Modal*/
 .modal {
   position: fixed;
   top: 0;
@@ -67,17 +79,17 @@ body {
   display: flex;
   animation: fadeIn linear 0.2s;
 }
-
 .modal__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 .modal__body {
   --growth-from: 0.7;
   --growth-to: 1;
+  --again-from: 1;
+  --again-to: 0.2;
   background-color: var(--white-color);
   margin: auto;
   position: relative;
@@ -87,7 +99,6 @@ body {
 .auth-form__aside {
   margin-top: 18px;
 }
-
 .auth-form__policy-text {
   font-size: 12px;
   color: var(--text-color);
@@ -107,7 +118,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .btn .btn--primary {
   color: #fff;
   background-color: #f50;
@@ -119,4 +129,121 @@ body {
 }
 .btn--size-s {
   font-size: 15px;
+}
+.playControls {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f2f2;
+  position: fixed;
+  margin-left: 0px;
+  display: flex;
+  bottom: 0;
+  border-top: #d6d6d6 solid 1px;
+}
+.playControls__item {
+  width: 1240px;
+  height: 100%;
+  margin-left: 140px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  align-items: center;
+}
+.btn-prev {
+  margin-left: 15px;
+  font-size: 16px;
+  align-items: center;
+}
+.btn-toggle-play {
+  margin-left: 26px;
+  display: flex;
+  justify-content: center;
+}
+.pauseBtn {
+  position: relative;
+  left: -15px;
+}
+.btn-next {
+  margin-left: 14px;
+}
+.btn-random {
+  margin-left: 26px;
+}
+.btn-repeat {
+  margin-left: 26px;
+}
+.playbackTimeline {
+  margin-left: 30px;
+  display: flex;
+}
+.range {
+  margin-left: 12px;
+  outline: none;
+  width: 512px;
+  color: #f50;
+  margin-top: -5px;
+}
+.progress {
+  width: 512px;
+  height: 1px;
+}
+.playbackTimeline__duration {
+  margin-left: 12px;
+}
+.volume {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+.volume-up {
+  position: relative;
+}
+.volume-down {
+  left: -16px;
+  position: relative;
+}
+.volume-mute {
+  left: -31px;
+  position: relative;
+}
+.playbackSoundBadge {
+  display: flex;
+  justify-content: space-around;
+}
+.image__lightOutline {
+  background-color: #f50;
+  display: flex;
+}
+.image__lightOutline--child {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.playbackSoundBadge__titleContextContainer {
+  margin-left: 14px;
+}
+.playbackSoundBadge__lightLink {
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+.playbackSoundBadge__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 223px;
+  white-space: nowrap;
+  height: 100%;
+}
+.playbackSoundBadge__titleLink {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+.btn-like {
+  margin-left: 20px;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+.btn-follow {
+  margin-left: 12px;
+  font-size: 1.4rem;
+  margin-top: 10px;
 }

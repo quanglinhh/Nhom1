@@ -1,5 +1,5 @@
 .header {
-  width: 1242px;
+  width: 1240px;
   height: 453px;
   margin-left: 0px;
   background: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg)
@@ -8,11 +8,9 @@
   position: relative;
   border-top: solid #f50;
 }
-
 .header__navbar {
   display: inline;
 }
-
 .logo {
   width: 163px;
   height: 23px;
@@ -55,13 +53,12 @@ a {
   background-color: #ff5500;
   color: #fff;
 }
-
 /*Authen modal */
 .auth-form {
   width: 600px;
   height: 100%;
 }
-.auth-form__contairer {
+.auth-form__container {
   padding: 0 32px;
 }
 .auth-form__form {
@@ -86,11 +83,9 @@ a {
 .auth-form__policy-tex {
   color: var(--text-color);
 }
-
 .auth-form__group {
   text-align: center;
 }
-
 .auth-form__controls {
   margin-top: 80px;
   display: flex;
@@ -160,7 +155,6 @@ a {
   height: 48px;
   margin-top: 30px;
 }
-
 /*SearchBar*/
 .search__title {
   margin-top: 32px;
@@ -215,15 +209,18 @@ a {
   height: 223px;
   flex-basis: 19%;
   margin-top: 35px;
+  position: relative;
 }
 .pageList-item__head {
   height: 182px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .pageList-item__img {
-  padding-top: 100%;
-  background-size: 182px;
   background-repeat: no-repeat;
+  width: 181px;
+  height: 100%;
 }
 .pageList-item__body {
   white-space: nowrap;
@@ -234,32 +231,50 @@ a {
 .pageList-item__name {
   color: var(--text-color);
 }
-.pageList-item__singer {
-}
+
 .pageList-item__option {
-  font-size: 15px;
-  color: white;
   position: absolute;
-  top: 90%;
-  right: 1%;
-  justify-content: space-between;
+  font-size: 15px;
+  color: var(--white-color);
+  display: inline;
+  top: 75%;
+  right: 25%;
 }
 .pageList-item__more {
 }
 .pageList-item__like {
   margin-right: 5px;
 }
+.pageList-item__action {
+  top: 20%;
+  left: 20%;
+}
+.pageList-item__action {
+  display: none;
+}
 .pageList-item__play {
+  position: absolute;
   font-size: 100px;
   background-color: rgba(0, 0, 0, 0);
-  position: absolute;
   top: 20%;
   left: 20%;
   border: none;
+  display: flex;
+}
+.pageList-item__play:hover {
+  cursor: pointer;
 }
 .pageList-item__play--icon {
   color: var(--primary-color);
 }
+
+.pageList-item__pause--icon {
+  color: var(--primary-color);
+  position: relative;
+  left: -90px;
+  display: none !important;
+}
+
 .pageList-item__body {
   font-size: 1.4rem;
   color: var(--text-color);
@@ -274,6 +289,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-left: 35px;
+  position: relative;
 }
 .explore-trending {
   margin-left: 495px;
@@ -286,6 +302,165 @@ a {
   width: 253px;
   height: 48px;
 }
-.btn-account {
-  display: none;
+
+/*TEASER*/
+.frontMobileTeaser {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+  background-color: #f2f2f2;
+}
+.frontMobileTeaser__devices {
+  background: url(https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 732px;
+  height: 392px;
+  margin-left: 70px;
+  margin-top: 58px;
+}
+.frontMobileTeaser__info {
+  width: 325px;
+  height: 450px;
+  position: absolute;
+  right: 0%;
+  margin-right: 70px;
+  background-color: #f2f2f2;
+  margin-top: 82px;
+}
+.g-type-marketing-header {
+  font-size: 2rem;
+  width: 325px;
+  font-weight: 100;
+}
+.g-type-marketing-header--text {
+  font-weight: 500;
+}
+.g-type-marketing-header:after {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-image: linear-gradient(90deg, #7d01a1, #f30 50%, #f50);
+  margin-top: 15px;
+  display: block;
+}
+.g-type-marketing-info {
+  font-size: 2rem;
+  margin: 10px;
+  line-height: 25px;
+  margin-left: 2px;
+}
+.frontMobileTeaser__links {
+  margin-top: 46px;
+  display: flex;
+  margin-left: 2px;
+}
+.frontMobileTeaser__links--apstore {
+  background: url(https://a-v2.sndcdn.com/assets/images/appstore_badge@en-9e7292e6.png)
+    no-repeat;
+  width: 120px;
+}
+.frontMobileTeaser__links--ggplay {
+  width: 135px;
+  height: 40px;
+  background: url(https://a-v2.sndcdn.com/assets/images/google_play_badge@en-51d52194.png)
+    no-repeat;
+  margin-left: -10px;
+}
+.FeaturedArtists {
+  background-image: url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg);
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 350px;
+  background-size: cover;
+  position: absolute;
+  margin-top: 450px;
+}
+.FeaturedArtists__wrapper {
+  width: 500px;
+  height: 225px;
+  margin-top: 75px;
+  margin-left: 75px;
+}
+.FeaturedArtists__wrapper--title {
+  font-size: 4rem;
+  color: var(--white-color);
+}
+.FeaturedArtist__wrapper--text {
+  color: var(--white-color);
+  font-size: 3rem;
+  line-height: 1.1;
+}
+.btn-findOut {
+  border: solid var(--white-color) 1px;
+  width: 165px;
+  height: 50px;
+}
+/**/
+.signupModule {
+  width: 100%;
+
+  height: 500px;
+  margin-top: 300px;
+  color: var(--text-color);
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+}
+.signupModule__title {
+  font-size: 4rem;
+  margin-top: 90px;
+}
+.signupModule__text {
+  font-size: 3rem;
+  padding-top: 10px;
+}
+.signupModule__btn {
+  width: 200px;
+  height: 44px;
+  background-color: #f50;
+  margin-left: 524px;
+  border: none;
+  color: var(--white-color);
+}
+.Module__signin {
+  margin-top: 29px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.signinModule__btn {
+  width: 80px;
+  height: 41px;
+  border: #e8e8e8 1px solid;
+  color: var(--text-color);
+  margin-left: 15px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+/*FOOTER*/
+.footer {
+  width: 100%;
+  background-color: #f50;
+  position: relative;
+  margin-top: 679px;
+  color: rgb(204 204 204);
+  background-color: rgb(255 255 255);
+  border: solid 1px rgb(242 242 242);
+  height: 106px;
+}
+.footer__link {
+  font-size: 1.3rem;
+  margin-left: 32px;
+  margin-top: 22px;
+}
+.footer__link--text {
+  color: rgb(204 204 204);
+}
+
+.footer__link--text:hover {
+  color: var(--text-color);
 }
